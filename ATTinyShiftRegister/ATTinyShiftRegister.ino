@@ -11,7 +11,7 @@
 // Connecting it to the Shift Register would free up a pin for the accelerometer
 #define CLEAR_PIN 4
 // currently only using the x value from the accelerometer
-#define ACC_X_PIN 1
+#define ACC_X_PIN 3
 #define REFRESH_DELAY 1200 // min 250
 
 //Pin connected to clock pin (SH_CP) of 74HC595
@@ -42,12 +42,16 @@ void setup() {
   clearDisplay();
   
   fullCount = EEPROM.read(0);
+
+  //Necessary
+  shiftOut(dataPin, clockPin, 0);
+  shiftOut(dataPin, clockPin, 0);
+  delay(500);
 }
 
 void loop() {
  //only count up if accelerometer is tilted
- //this line isn't working correctly. Perhaps something with ATTiny + Analog inputs?
- if (analogRead(ACC_X_PIN) < 300){
+ if (analogRead(ACC_X_PIN) < 400) {
     fullCount++;
   
     if (fullCount > 31){
@@ -61,7 +65,6 @@ void loop() {
     clearDisplay();
     delay(REFRESH_DELAY);
  }
- 
 }
 
 
@@ -113,5 +116,23 @@ void shiftOut(int myDataPin, int myClockPin, byte myDataOut) {
 
   //stop shifting
   digitalWrite(myClockPin, 0);
+}
+
+//blinks the whole register based on the number of times you want to 
+//blink "n" and the pause between them "d"
+//starts with a moment of darkness to make sure the first blink
+//has its full visual effect.
+void blinkAll_2Bytes(int n, int d) {
+  shiftOut(dataPin, clockPin, 0);
+  shiftOut(dataPin, clockPin, 0);
+  delay(200);
+  for (int x = 0; x < n; x++) {
+    shiftOut(dataPin, clockPin, 255);
+    shiftOut(dataPin, clockPin, 255);
+    delay(d);
+    shiftOut(dataPin, clockPin, 0);
+    shiftOut(dataPin, clockPin, 0);
+    delay(d);
+  }
 }
 
