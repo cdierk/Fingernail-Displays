@@ -9,10 +9,10 @@
 
 // Clear pin is connected directly to ATTiny
 // Connecting it to the Shift Register would free up a pin for the accelerometer
-#define CLEAR_PIN 4
+#define CLEAR_PIN 1
 // currently only using the x value from the accelerometer
-#define ACC_X_PIN 3
-#define REFRESH_DELAY 1200 // min 250
+#define ACC_Z_PIN 3
+#define REFRESH_DELAY 500 // min 250
 
 //Pin connected to clock pin (SH_CP) of 74HC595
 const int clockPin = 2; // pin 11 of 74HC595
@@ -51,7 +51,9 @@ void setup() {
 
 void loop() {
  //only count up if accelerometer is tilted
- if (analogRead(ACC_X_PIN) < 400) {
+ int firstZ = analogRead(ACC_Z_PIN);
+ int secondZ = analogRead(ACC_Z_PIN);
+ if (abs(firstZ - secondZ) > 2) {
     fullCount++;
   
     if (fullCount > 31){
