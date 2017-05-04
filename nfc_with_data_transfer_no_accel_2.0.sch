@@ -1366,18 +1366,6 @@ chip</description>
 <busses>
 </busses>
 <nets>
-<net name="DOT3" class="0">
-<segment>
-<pinref part="EINK" gate="A" pin="5"/>
-<wire x1="134.62" y1="10.16" x2="142.24" y2="10.16" width="0.1524" layer="91"/>
-<label x="137.16" y="10.16" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="MCU" gate="G$1" pin="PB4(ADC2)"/>
-<wire x1="71.12" y1="17.78" x2="76.2" y2="17.78" width="0.1524" layer="91"/>
-<label x="71.12" y="17.78" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="DOT1" class="0">
 <segment>
 <pinref part="EINK" gate="A" pin="3"/>
@@ -1385,9 +1373,9 @@ chip</description>
 <label x="137.16" y="7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="MCU" gate="G$1" pin="PB1(MISO)"/>
-<wire x1="71.12" y1="25.4" x2="76.2" y2="25.4" width="0.1524" layer="91"/>
-<label x="71.12" y="25.4" size="1.778" layer="95"/>
+<pinref part="MCU" gate="G$1" pin="PB4(ADC2)"/>
+<wire x1="71.12" y1="17.78" x2="76.2" y2="17.78" width="0.1524" layer="91"/>
+<label x="71.12" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RST" class="0">
@@ -1467,9 +1455,9 @@ chip</description>
 <label x="137.16" y="12.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="MCU" gate="G$1" pin="PB5(NRES)"/>
-<wire x1="71.12" y1="15.24" x2="76.2" y2="15.24" width="0.1524" layer="91"/>
-<label x="71.12" y="15.24" size="1.778" layer="95"/>
+<pinref part="MCU" gate="G$1" pin="PB1(MISO)"/>
+<wire x1="71.12" y1="25.4" x2="76.2" y2="25.4" width="0.1524" layer="91"/>
+<label x="71.12" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="COIL" class="0">
@@ -1511,6 +1499,11 @@ chip</description>
 <label x="35.56" y="15.24" size="1.778" layer="95"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="33.02" y1="17.78" x2="33.02" y2="15.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="EINK" gate="A" pin="5"/>
+<wire x1="134.62" y1="10.16" x2="142.24" y2="10.16" width="0.1524" layer="91"/>
+<label x="137.16" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="FD" class="0">
