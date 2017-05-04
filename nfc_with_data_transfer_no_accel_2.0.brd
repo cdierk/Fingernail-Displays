@@ -23,7 +23,7 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -542,28 +542,30 @@ design rules under a new name.</description>
 <signal name="DOT3">
 <contactref element="EINK" pad="5"/>
 <contactref element="MCU" pad="3"/>
+<wire x1="7.5946" y1="10.4394" x2="7.747" y2="10.287" width="0.3048" layer="1"/>
 <wire x1="8.5344" y1="7.6454" x2="8.5344" y2="8.6106" width="0.3048" layer="1"/>
-<wire x1="8.5344" y1="8.6106" x2="7.747" y2="9.398" width="0.3048" layer="1"/>
-<wire x1="7.747" y1="9.398" x2="7.747" y2="10.287" width="0.3048" layer="1"/>
-<wire x1="7.747" y1="10.287" x2="7.5946" y2="10.4394" width="0.3048" layer="1"/>
+<wire x1="8.5344" y1="8.6106" x2="7.62" y2="9.525" width="0.3048" layer="1"/>
+<wire x1="7.62" y1="9.525" x2="7.62" y2="10.414" width="0.3048" layer="1"/>
+<wire x1="7.62" y1="10.414" x2="7.5946" y2="10.4394" width="0.3048" layer="1"/>
 </signal>
 <signal name="DOT1">
 <contactref element="EINK" pad="3"/>
-<contactref element="MCU" pad="2"/>
-<wire x1="7.5438" y1="7.6454" x2="7.5438" y2="8.4582" width="0.3048" layer="1"/>
-<wire x1="7.5438" y1="8.4582" x2="6.35" y2="9.652" width="0.3048" layer="1"/>
-<wire x1="6.35" y1="9.652" x2="6.35" y2="10.414" width="0.3048" layer="1"/>
-<wire x1="6.35" y1="10.414" x2="6.3246" y2="10.4394" width="0.3048" layer="1"/>
+<contactref element="MCU" pad="6"/>
+<wire x1="7.5438" y1="7.6454" x2="7.5438" y2="8.3312" width="0.3048" layer="1"/>
+<wire x1="7.5438" y1="8.3312" x2="6.985" y2="8.89" width="0.3048" layer="1"/>
+<wire x1="6.985" y1="8.89" x2="6.985" y2="15.24" width="0.3048" layer="1"/>
+<wire x1="6.985" y1="15.24" x2="7.62" y2="15.875" width="0.3048" layer="1"/>
+<wire x1="7.62" y1="15.875" x2="7.62" y2="17.145" width="0.3048" layer="1"/>
+<wire x1="7.62" y1="17.145" x2="7.5946" y2="17.1704" width="0.3048" layer="1"/>
 </signal>
 <signal name="RST">
 <contactref element="EINK" pad="1"/>
-<contactref element="MCU" pad="1"/>
 <wire x1="6.5278" y1="7.9502" x2="6.5278" y2="7.6454" width="0.3048" layer="1"/>
-<wire x1="6.5278" y1="7.6454" x2="6.5278" y2="8.0772" width="0.3048" layer="1"/>
 <wire x1="5.08" y1="9.525" x2="5.08" y2="10.414" width="0.3048" layer="1"/>
-<wire x1="5.08" y1="10.414" x2="5.0546" y2="10.4394" width="0.3048" layer="1"/>
-<wire x1="6.5278" y1="7.6454" x2="6.5278" y2="8.0772" width="0.3048" layer="1"/>
-<wire x1="6.5278" y1="8.0772" x2="5.08" y2="9.525" width="0.3048" layer="1"/>
+<contactref element="MCU" pad="2"/>
+<wire x1="6.5278" y1="7.6454" x2="6.5278" y2="10.2362" width="0.3048" layer="1"/>
+<wire x1="6.5278" y1="10.2362" x2="6.3246" y2="10.4394" width="0.3048" layer="1"/>
+<wire x1="6.3246" y1="10.4394" x2="5.08" y2="10.414" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="2.8V">
 <contactref element="U1" pad="6"/>
@@ -728,10 +730,8 @@ design rules under a new name.</description>
 </signal>
 <signal name="DOT5">
 <contactref element="EINK" pad="7"/>
-<contactref element="MCU" pad="6"/>
-<wire x1="9.525" y1="11.557" x2="9.525" y2="7.6454" width="0.3048" layer="1"/>
-<wire x1="7.5946" y1="17.1704" x2="7.5946" y2="13.4874" width="0.3048" layer="1"/>
-<wire x1="7.5946" y1="13.4874" x2="9.525" y2="11.557" width="0.3048" layer="1"/>
+<contactref element="MCU" pad="1"/>
+<wire x1="5.0546" y1="10.4394" x2="9.525" y2="7.6454" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
