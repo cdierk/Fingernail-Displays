@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="8.2.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.001" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
+<grid distance="0.001" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.001" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -24,16 +24,16 @@
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
@@ -105,7 +105,7 @@
 <layer number="129" name="Mask" color="7" fill="1" visible="no" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
-<layer number="144" name="Drill_legend" color="7" fill="1" visible="no" active="yes"/>
+<layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="no" active="yes"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="no" active="yes"/>
@@ -154,18 +154,18 @@
 </layers>
 <board>
 <plain>
-<wire x1="3.683" y1="17.78" x2="3.683" y2="3.18728125" width="0" layer="20"/>
-<wire x1="3.683" y1="3.18728125" x2="4.965221875" y2="1.917340625" width="0" layer="20" curve="90.551396"/>
-<wire x1="4.965221875" y1="1.917340625" x2="15.633221875" y2="2.020021875" width="0" layer="20"/>
-<wire x1="15.633221875" y1="2.020021875" x2="16.891" y2="3.2899625" width="0" layer="20" curve="89.455027"/>
-<wire x1="16.891" y1="3.2899625" x2="16.891" y2="17.78" width="0" layer="20"/>
-<wire x1="16.891" y1="17.78" x2="14.351" y2="20.32" width="0" layer="20" curve="90"/>
-<wire x1="14.351" y1="20.32" x2="6.223" y2="20.32" width="0" layer="20"/>
-<wire x1="6.223" y1="20.32" x2="3.683" y2="17.78" width="0" layer="20" curve="90"/>
 <dimension x1="16.891" y1="2.032128125" x2="16.891" y2="20.32" x3="20.828" y3="11.1760625" textsize="1.778" layer="47"/>
 <dimension x1="16.891" y1="20.32" x2="3.683" y2="20.32" x3="10.287" y3="22.225" textsize="1.778" layer="47"/>
-<text x="11.557" y="6.096" size="1.27" layer="16" font="vector" ratio="20" rot="MR90">AlterNail</text>
-<text x="9.271" y="6.223" size="1.27" layer="16" font="vector" ratio="20" rot="MR90">RevB</text>
+<text x="11.5316" y="6.096" size="1.27" layer="26" font="vector" ratio="20" rot="MR90">AlterNail</text>
+<text x="9.271" y="6.223" size="1.27" layer="26" font="vector" ratio="20" rot="MR90">RevB</text>
+<wire x1="2.7686" y1="2.159" x2="2.7686" y2="19.9136" width="0.254" layer="20"/>
+<wire x1="2.7686" y1="19.9136" x2="2.8448" y2="19.9898" width="0.254" layer="20"/>
+<wire x1="2.8448" y1="20.0914" x2="17.907" y2="20.0914" width="0.254" layer="20"/>
+<wire x1="17.907" y1="20.0914" x2="17.9578" y2="20.0406" width="0.254" layer="20"/>
+<wire x1="17.9578" y1="20.0406" x2="17.9578" y2="2.032" width="0.254" layer="20"/>
+<wire x1="17.9578" y1="2.032" x2="17.9324" y2="2.0066" width="0.254" layer="20"/>
+<wire x1="17.9324" y1="2.0066" x2="2.8448" y2="2.0066" width="0.254" layer="20"/>
+<wire x1="2.8448" y1="2.0066" x2="2.8194" y2="2.032" width="0.254" layer="20"/>
 </plain>
 <libraries>
 <library name="Molex_By_element14_Batch_1">
@@ -525,10 +525,10 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="EINK" library="Molex_By_element14_Batch_1" package="MOLEX_52892-1695" value="52892-1695" x="10.287" y="10.541" rot="R180">
-<attribute name="PACKAGE" value="CONNECTOR, FPC, ZIF, 0.50MM, 16 WAY" x="10.287" y="10.541" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="52892-1695" x="10.287" y="10.541" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="OC_NEWARK" value="92M6601" x="10.287" y="10.541" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_FARNELL" value="1556807" x="10.287" y="10.541" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="OC_NEWARK" value="92M6601" x="10.287" y="10.541" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="PACKAGE" value="CONNECTOR, FPC, ZIF, 0.50MM, 16 WAY" x="10.287" y="10.541" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SUPPLIER" value="Molex" x="10.287" y="10.541" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="MCU" library="SparkFun-DigitalIC" package="SO08-EIAJ" value="Tiny85-20-SMT" x="6.9596" y="13.8176">
@@ -686,12 +686,6 @@ design rules under a new name.</description>
 <contactref element="U1" pad="2"/>
 <contactref element="MCU" pad="4"/>
 <contactref element="C1" pad="2"/>
-<polygon width="0.3048" layer="1" rank="2">
-<vertex x="17.653" y="19.558"/>
-<vertex x="3.048" y="19.558"/>
-<vertex x="3.048" y="2.286"/>
-<vertex x="17.653" y="2.286"/>
-</polygon>
 <wire x1="11.4524" y1="17.7038" x2="10.9982" y2="17.7038" width="0.3048" layer="1"/>
 <wire x1="10.9982" y1="17.7038" x2="9.525" y2="19.05" width="0.3048" layer="1"/>
 <wire x1="9.525" y1="19.05" x2="6.223" y2="19.05" width="0.3048" layer="1"/>
